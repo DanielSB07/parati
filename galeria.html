@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería - 7 Meses Juntos</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Nuestra Galería</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="momentos.html">Momentos</a></li>
+                <li><a href="cartas.html">Cartas</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Modal para agrandar imagen -->
+<div id="modal" class="modal" onclick="closeModal()">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modal-img">
+    <div id="caption"></div>
+</div>
+
+<script>
+    function openModal(src, alt) {
+        const modal = document.getElementById("modal");
+        const modalImg = document.getElementById("modal-img");
+        const captionText = document.getElementById("caption");
+        modal.style.display = "block";
+        modalImg.src = src;
+        captionText.innerHTML = alt;
+    }
+
+    function closeModal() {
+        const modal = document.getElementById("modal");
+        modal.style.display = "none";
+    }
+</script>
+<section class="galeria">
+    <h2>Foticos en lugares junticos</h2>
+    <div class="galeria-grid">
+        <figure>
+            <img src="img/beso.jpg" alt="En un Parque" onclick="openModal(this.src, this.alt)">
+            <figcaption>En un Parque</figcaption>
+        </figure>
+        <figure>
+            <img src="img/chia.jpg" alt="Centro Chía" onclick="openModal(this.src, this.alt)">
+            <figcaption>Centro Chía</figcaption>
+        </figure>
+        <figure>
+            <img src="img/espejo.jpg" alt="Cajica jijiji" onclick="openModal(this.src, this.alt)">
+            <figcaption>Cajica jijiji</figcaption>
+        </figure>
+        <figure>
+            <img src="img/fiesta.jpg" alt="Primera chiva juntos ekside" onclick="openModal(this.src, this.alt)">
+            <figcaption>Primera chiva juntos ekside</figcaption>
+        </figure>
+        <figure>
+            <img src="img/mirando.jpg" alt="Ojitoss" onclick="openModal(this.src, this.alt)">
+            <figcaption>Ojitoss</figcaption>
+        </figure>
+        <figure>
+            <img src="img/risa.jpg" alt="Los 2 enamoraos" onclick="openModal(this.src, this.alt)">
+            <figcaption>Los 2 enamoraos</figcaption>
+        </figure>
+    </div>
+</section>
+
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Felices 7 Mesecitos ❤️</p>
+    </footer>
+</body>
+</html>
